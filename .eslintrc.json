@@ -1,3 +1,8 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": ["next/babel","next/core-web-vitals"],
+  "rules": {
+    "no-multiple-empty-lines": [2, { "max": 2, "maxEOF": 0 }],
+    "react/jsx-props-no-multi-spaces": ["error"]
+  }
+
 }

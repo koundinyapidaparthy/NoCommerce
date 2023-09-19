@@ -1,0 +1,69 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 97vh;
+    width: 100%;
+}
+.section0{
+    font-size: 45px;
+    color: #1d7c4f;
+    font-weight: 500;
+}
+.section1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 40%;
+    min-width: 300px;
+    height: 40%;
+}
+.inputFieldWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 35%;
+}
+
+.inputFieldWrapper input {
+    border-radius: 8px;
+    border: 1.5px solid #00aa58 ;
+    padding: 5px 10px;
+    font-weight: 550;
+    margin-bottom: 5px;
+}
+
+
+.inputFieldWrapper input[type="button"] {
+    border-radius: 5px;
+    background-color: #00aa58;
+    color:white ;
+    font-weight: 550;
+    cursor: pointer;
+    padding: 3px 15px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.googleLoginWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:30px;
+    border: 1px solid #00aa58;
+    padding: 5px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.signInWithGoogle{
+    margin-left: 10px;
+}
+
+.anchorRef{
+    color:#1d7c4f ;
+    font-weight: bold;
+    font-size: 15px;
+}

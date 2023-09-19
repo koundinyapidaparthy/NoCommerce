@@ -1,0 +1,37 @@
+Home Page Design 
+    User Profile 
+    Products
+        Add to Cart 
+
+
+User Profile 
+    Account Detials:
+        User Image,
+        NickName,
+        First Name, Last Name,
+        Email
+        Mobile Number,
+    Address
+    Cards
+
+Particular Product Page
+
+    About Product
+
+    Recommended ( Item Catogery) / Recently Viewed / Suggested Products ( Product Category)
+
+    Product Rating
+
+Add to Cart Page
+
+Checkout
+
+Address Detials 
+
+Payment Methods
+
+Order Confirm Page ( Text / Email )
+
+
+
+

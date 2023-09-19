@@ -1,0 +1,180 @@
+.wrapper {
+    width: 100%;
+    height: 97vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.divWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 65%;
+    max-width: 50%;
+    min-width: 300px;
+    position: relative;
+}
+
+.welcome{
+    font-size: 45px;
+    color: #1d7c4f;
+    font-weight: 500;
+}
+.userImage{
+    min-width: 300px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.userImage .editImage {
+    padding: 10px;
+    border-radius: 50%;
+    border-bottom-left-radius: 0px;
+    position:absolute;
+    z-index: -1;
+}
+.userImage input {
+    font-size: 0px;
+    width: 100px;
+    height: 100px;
+    background: #e0e0e066;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1.5px solid #00aa58 ;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+
+.userName , .phoneNumber, .passwords {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+
+
+
+.userName input , .phoneNumber select, .phoneNumber input, .email input, .passwords input {
+    border-radius: 8px;
+    border: 1.5px solid #00aa58 ;
+    padding: 5px 10px;
+    font-weight: 550;
+    margin: 0px 5px;
+    width: 125px;
+}
+
+.phoneNumber select {
+    width: 70px;
+}
+
+.phoneNumber input {
+    width: 200px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+.phoneNumber input::-webkit-outer-spin-button,
+.phoneNumber input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.phoneNumber input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.email input{
+    width: 280px;
+}   
+
+
+.signIn input {
+    padding: 5px 10px;
+    border-radius: 4px;
+    background-color: #00aa58;
+    border: 1px solid #00aa58;
+    color: white;
+    font-size: 12px;
+    font-weight: 550;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.anchorRef{
+    color:#1d7c4f ;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.googleLoginWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:10px;
+    border: 1px solid #00aa58;
+    padding: 5px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.signInWithGoogle{
+    margin-left: 10px;
+}
+
+.userImage .userSelectedImage{
+    border-radius: 50%;
+    object-fit: cover; 
+    cursor: pointer;
+}
+
+.userImage .userSelectedImage:hover{
+    opacity: 0.5;
+}
+
+.userImage .eyeImage {
+        cursor: pointer;
+        position: absolute;
+        bottom: 15%;
+        left: 68%;
+        opacity: 0.5;
+}
+
+.userImage .eyeImage:hover {
+        opacity: 1;
+}
+
+.viewImage{
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.877);
+    z-index: 1000;
+    top: -20px;
+    width: 120%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #00aa58;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.editViewImage{
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.closeViewImage{
+    position: absolute;
+    font-size: 15px;
+    top: 5px;
+    right: 0px;
+    padding: 4px 10px;
+    font-weight: 550;
+    text-align: center;
+    color: #00aa58;
+    cursor: pointer;
+}
