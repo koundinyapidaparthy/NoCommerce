@@ -3,7 +3,6 @@ Home Page Design
     Products
         Add to Cart 
 
-
 User Profile 
     Account Detials:
         User Image,
@@ -31,6 +30,14 @@ Address Detials
 Payment Methods
 
 Order Confirm Page ( Text / Email )
+
+
+
+
+Varsha
+
+Error Handling Page
+
 
 
 
