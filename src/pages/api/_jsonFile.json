@@ -1,0 +1,32 @@
+[
+    {
+        "itemCategory": "cleaning",
+        "productCategory":"bathroom",
+        "name":"Washing Machine1",
+        "price" :"150$",
+        "productId":"123456",
+        "slideViewImages":["/Images/WashingMachineImage1.jpg",
+        "/Images/WashingMachineImage2.jpg","/Images/WashingMachineImage3.jpg"],
+        "ratting":"4.5"
+    },
+    {
+        "itemCategory": "cleaning",
+        "productCategory":"bathroom",
+        "name":"Washing Machine2",
+        "price" :"140$",
+        "productId":"123456",
+        "slideViewImages":["/Images/WashingMachineImage2.jpg",
+        "/Images/WashingMachineImage3.jpg","/Images/WashingMachineImage1.jpg"],
+        "ratting":"3.5"
+    },
+    {
+        "itemCategory": "cleaning",
+        "productCategory":"bathroom",
+        "name":"Washing Machine3",
+        "price" :"140$",
+        "productId":"123456",
+        "slideViewImages":["/Images/WashingMachineImage3.jpg",
+        "/Images/WashingMachineImage1.jpg","/Images/WashingMachineImage2.jpg"],
+        "ratting":"3.5"
+    }
+]

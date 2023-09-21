@@ -11,7 +11,6 @@ import Link from "next/link";
 
 export default function Header() {
   const { data: session } = useSession();
-  console.log({ session });
   const userImage = session?.user?.image;
   return (
     <div className={Styles.wrapper}>
@@ -21,6 +20,7 @@ export default function Header() {
           width={65}
           height={65}
           className={Styles.logo}
+          alt="CompanyLogo"
         />
       </div>
       <div className={Styles.section1}>
@@ -53,7 +53,7 @@ export default function Header() {
             width={35}
             height={35}
             className={Styles.userImage}
-            objectFit="contain"
+            alt="UserImage"
           />
         </div>
       </div>

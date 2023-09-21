@@ -1,0 +1,49 @@
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.filtersWrapper {
+    width: 13.2%;
+    padding: 10px;
+} 
+
+.productListWrappers {
+    width: 86.8%;
+    padding: 10px;
+    display: flex;
+    flex: 1;
+    height: 90vh;
+    border: 1px solid black;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    flex-wrap: wrap;
+}
+
+.productListWrappers::-webkit-scrollbar {
+    width: 5px;
+}
+
+.productListWrappers .eachProduct {
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    margin: 5px 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 8px;
+}
+
+.productListWrappers .eachProduct .productImage {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.productListWrappers .eachProduct .title {
+    margin: 10px 0px 0px 10px;
+    width: 290px;
+    height: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
