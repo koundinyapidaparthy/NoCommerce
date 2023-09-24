@@ -82,12 +82,7 @@ const SignIn = () => {
         </div>
         <div
           className={styles.googleLoginWrapper}
-          onClick={() =>
-            signIn("google", {
-              callbackUrl: "'http://localhost:3000/home",
-              redirect: false,
-            })
-          }
+          onClick={() => signIn("google")}
         >
           <Image
             src={"/Images/Google.png"}

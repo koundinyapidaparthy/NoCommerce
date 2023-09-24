@@ -7,7 +7,8 @@
         "productId":"123456",
         "slideViewImages":["/Images/WashingMachineImage1.jpg",
         "/Images/WashingMachineImage2.jpg","/Images/WashingMachineImage3.jpg"],
-        "ratting":"4.5"
+        "ratting":4.5,
+        "voteCount":721
     },
     {
         "itemCategory": "cleaning",
@@ -17,7 +18,8 @@
         "productId":"123456",
         "slideViewImages":["/Images/WashingMachineImage2.jpg",
         "/Images/WashingMachineImage3.jpg","/Images/WashingMachineImage1.jpg"],
-        "ratting":"3.5"
+        "ratting":3.5,
+        "voteCount":396
     },
     {
         "itemCategory": "cleaning",
@@ -27,6 +29,17 @@
         "productId":"123456",
         "slideViewImages":["/Images/WashingMachineImage3.jpg",
         "/Images/WashingMachineImage1.jpg","/Images/WashingMachineImage2.jpg"],
-        "ratting":"3.5"
+        "ratting":2,
+        "voteCount":454
+    },{
+        "itemCategory": "cleaning",
+        "productCategory":"bathroom",
+        "name":"Washing Machine5",
+        "price" :"120$",
+        "productId":"123456",
+        "slideViewImages":["/Images/WashingMachineImage3.jpg",
+        "/Images/WashingMachineImage1.jpg","/Images/WashingMachineImage2.jpg"],
+        "ratting":2,
+        "voteCount":454
     }
 ]

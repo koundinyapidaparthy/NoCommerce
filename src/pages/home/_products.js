@@ -1,7 +1,8 @@
 import Styles from "../../styles/home/products.module.css";
-import Image from "next/image";
+import Product from "./_product";
 export function Products({ allProducts }) {
   console.log({ allProducts });
+
   return (
     <div className={Styles.wrapper}>
       {/* Here Dynamic Filters will be Rendered */}
@@ -11,24 +12,24 @@ export function Products({ allProducts }) {
       </div>
       <div className={Styles.productListWrappers}>
         {Array.isArray(allProducts) && allProducts.length > 0
-          ? allProducts.map(({ name, slideViewImages, price }, index) => {
-              console.log(slideViewImages);
-              return (
-                <div key={index} className={Styles.eachProduct}>
-                  <Image
-                    src={`${slideViewImages[0]}`}
-                    alt={"product" + name}
-                    width={300}
-                    height={300}
-                    objectFit="cover"
-                    className={Styles.productImage}
+          ? allProducts.map(
+              (
+                { name, slideViewImages, price, ratting, productId, voteCount },
+                index
+              ) => {
+                return (
+                  <Product
+                    key={index}
+                    name={name}
+                    slideViewImages={slideViewImages}
+                    price={price}
+                    ratting={ratting}
+                    productId={productId}
+                    voteCount={voteCount}
                   />
-                  <div className={Styles.title}>
-                    {name} - {price}
-                  </div>
-                </div>
-              );
-            })
+                );
+              }
+            )
           : null}
       </div>
     </div>

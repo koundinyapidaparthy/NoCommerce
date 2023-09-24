@@ -33,17 +33,87 @@
     margin: 5px 10px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 8px;
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
 }
 
-.productListWrappers .eachProduct .productImage {
+.productListWrappers .eachProduct:hover {
+    animation: productHover 0.5s linear 0.2s forwards;
+    transform: scale(1.0);
+}
+
+@keyframes productHover {
+   0% {
+    transform: scale(1.0);
+   } 
+   100% {
+    transform: scale(1.02);
+   }
+}
+
+.productListWrappers .eachProduct .productImageWrapper{
+    margin: 0px;
+    position: relative;
+}
+
+.productListWrappers .eachProduct .productImageWrapper .productImage {
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
 }
 .productListWrappers .eachProduct .title {
-    margin: 10px 0px 0px 10px;
     width: 290px;
     height: 15px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.productListWrappers .eachProduct > div {
+    margin: 10px 0px 0px 10px;
+    font-weight: 520;
+}
+
+.productListWrappers .eachProduct .rattingwrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+.productListWrappers .eachProduct .rattingwrapper .voteCount {
+    font-size: 12px;
+    margin-left: 5px;
+    color: black;
+}
+
+.productListWrappers .eachProduct .rattingwrapper .ratting {
+    margin-left: 5px;
+}
+.productListWrappers .eachProduct .rattingwrapper .ratting .listOfStars {
+    color: #00aa58;
+}
+
+.scrollButton1, .scrollButton2, .scrollButton3 {
+    position: absolute;
+    width: 20px;
+    height: 3px;
+    border-radius: 8px;
+    background-color: rgba(249, 249, 249, 0.459);
+    bottom: 12.5px;
+}
+
+.scrollButton1 {
+    left: 30%;
+}
+
+.scrollButton2 {
+    left: 45%;
+}
+
+.scrollButton3 {
+    left: 60%;
+}
+
+.activeScrollButtonBackGround {
+    background-color: black;
 }
