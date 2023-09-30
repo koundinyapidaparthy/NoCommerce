@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, createRef, useRef, useEffect, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -14,31 +14,36 @@ export default function ProductImage({
   productId,
   voteCount,
 }) {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  let clearImageUpdate;
-  console.log(currentImageIndex);
-  function imageUpdateOnHover() {
-    if (currentImageIndex === 2) {
-      setCurrentImageIndex(currentImageIndex - currentImageIndex);
-    } else {
-      setCurrentImageIndex(currentImageIndex + 1);
-    }
-  }
   const noOfRattings = [0, 1, 2, 3, 4];
+  const imageInstance = useRef(null);
+  const [currentHighlightedImageIndex, setCurrentHighlightedImageIndex] =
+    useState(0);
+  const currentMemorizedIndex = useRef(0);
+  function imageUpdateOnHover() {
+    const nextImageIndex =
+      currentMemorizedIndex.current === slideViewImages.length - 1
+        ? 0
+        : currentMemorizedIndex.current + 1;
+    setCurrentHighlightedImageIndex(nextImageIndex);
+    currentMemorizedIndex.current = nextImageIndex;
+  }
   return (
     <Link
       href={`/product?id=${productId}`}
       className={Styles.eachProduct}
       onMouseOver={() => {
-        clearImageUpdate = setTimeout(imageUpdateOnHover, 1000);
+        if (!imageInstance.current) {
+          imageInstance.current = setInterval(imageUpdateOnHover, 1500);
+        }
       }}
-      onMouseLeave={() => {
-        clearTimeout(clearImageUpdate);
+      onMouseOut={() => {
+        clearInterval(imageInstance.current);
+        imageInstance.current = null;
       }}
     >
       <div className={Styles.productImageWrapper}>
         <Image
-          src={`${slideViewImages[currentImageIndex]}`}
+          src={`${slideViewImages[currentHighlightedImageIndex]}`}
           alt={"product" + name}
           width={300}
           height={300}
@@ -48,19 +53,25 @@ export default function ProductImage({
         <div
           className={clsx(
             Styles.scrollButton1,
-            currentImageIndex === 0 ? Styles.activeScrollButtonBackGround : ""
+            currentHighlightedImageIndex === 0
+              ? Styles.activeScrollButtonBackGround
+              : ""
           )}
         ></div>
         <div
           className={clsx(
             Styles.scrollButton2,
-            currentImageIndex === 1 ? Styles.activeScrollButtonBackGround : ""
+            currentHighlightedImageIndex === 1
+              ? Styles.activeScrollButtonBackGround
+              : ""
           )}
         ></div>
         <div
           className={clsx(
             Styles.scrollButton3,
-            currentImageIndex === 2 ? Styles.activeScrollButtonBackGround : ""
+            currentHighlightedImageIndex === 2
+              ? Styles.activeScrollButtonBackGround
+              : ""
           )}
         ></div>
       </div>
@@ -68,9 +79,6 @@ export default function ProductImage({
         {name} - {price}
       </div>
       <div className={Styles.rattingwrapper}>
-        {/* <div className={Styles.rattingText}>
-                        Ratting - {ratting}
-                      </div> */}
         <div className={Styles.ratting} title={`${ratting} of 5`}>
           {noOfRattings.map(({}, index) => {
             if (index <= ratting - 1) {
